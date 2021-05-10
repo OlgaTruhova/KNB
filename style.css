@@ -37,3 +37,114 @@
     width: 100%;
 }
 
+#player-choice, #computer-choice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 250px;
+}
+
+#score-wrapper {
+    width: 25%;
+    min-width: 50px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 3% 0 0 0;
+}
+
+
+.result-text {
+    width: 18%;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 7% 1% 0 1%;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 27px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+}
+
+
+button {
+    width: 20%;
+    min-width: 60px;
+    background: #03C03C;
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+}
+
+button > img {
+    width: 70%;
+}
+
+button > span {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+@keyframes change {
+    30% {
+        background: url(./img/nojnici_levo.png) center / 100% no-repeat;
+    }
+
+    60% {
+        background: url(./img/bumaga_levo.png) center / 100% no-repeat;
+    }
+}
+
+.animPl {
+    background: url(./img/kamen_levo.png) center / 100% no-repeat;
+    animation: change 1s ease infinite;
+}
+
+@keyframes change2 {
+    30% {
+        background: url(./img/nojnici.png) center / 100% no-repeat;
+    }
+
+    60% {
+        background: url(./img/bumaga.png) center / 100% no-repeat;
+    }
+}
+
+.animCom {
+    background: url(./img/kamen.png) center / 100% no-repeat;
+    animation: change2 1s ease infinite;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    #name-game {
+        font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    button > span {
+        font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .text {
+        font-size: calc(17px + (27 - 17) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    .result-text {
+        font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    #score-wrapper {
+        font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    #player-choice, #computer-choice {
+        height: calc(100px + (250 - 100) * ((100vw - 320px) / (1200 - 320)));;
+    }
+}
